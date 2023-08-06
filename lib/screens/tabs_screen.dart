@@ -16,35 +16,25 @@ class _TabsScreenState extends State<TabsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: AppDrawer(),
+      endDrawer: AppDrawer(),
       appBar: AppBar(
-        actions: [
-          IconButton(
-            onPressed: () {
-              // Navigator.of(context).pushNamed(CoinScreen.routeName);
-            },
-            icon: Icon(Icons.portable_wifi_off_outlined),
-          ),
-        ],
-        title: const Text("Food classification"),
-        centerTitle: true,
-        // leading: IconButton(
-        //   icon: Icon(Icons.menu),
-        //   onPressed: () {},
-        // ),
+        title: const Text(
+          "Food classification",
+          style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
         onPressed: () {},
-        child: Icon(
-          Icons.camera,
-          size: 35,
+        child: const Icon(
+          Icons.camera_alt_outlined,
+          size: 30,
+          color: Color.fromRGBO(50, 75, 80, 1),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        //bottom navigation bar on scaffold
-        color: Colors.blue,
-        shape: CircularNotchedRectangle(), //shape of notch
+        //shape of notch
         notchMargin:
             5, //notche margin between floating button and bottom appbar
         child: Container(
@@ -52,71 +42,90 @@ class _TabsScreenState extends State<TabsScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  MaterialButton(
-                    minWidth: 40,
-                    onPressed: () {
-                      setState(() {
-                        currentScreen =
-                            HomeScreen(); // if user taps on this dashboard tab will be active
-                        currentTab = 0;
-                      });
-                    },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Icon(
-                          Icons.home,
-                          color: currentTab == 0 ? Colors.black : Colors.white,
-                        ),
-                        Text(
-                          'Home',
-                          style: TextStyle(
-                            color:
-                                currentTab == 0 ? Colors.black : Colors.white,
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    MaterialButton(
+                      splashColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      minWidth: 40,
+                      onPressed: () {
+                        setState(() {
+                          currentScreen =
+                              HomeScreen(); // if user taps on this dashboard tab will be active
+                          currentTab = 0;
+                        });
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(
+                            Icons.home,
+                            color: currentTab == 0
+                                ? const Color.fromRGBO(50, 75, 80, 1)
+                                : const Color.fromRGBO(152, 152, 156, 1),
                           ),
-                        ),
-                      ],
+                          Text(
+                            'Home',
+                            style: TextStyle(
+                              color: currentTab == 0
+                                  ? const Color.fromRGBO(50, 75, 80, 1)
+                                  : const Color.fromRGBO(152, 152, 156, 1),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-
+              const SizedBox(
+                width: 40,
+              ),
               // Right Tab bar icons
-
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  MaterialButton(
-                    minWidth: 40,
-                    onPressed: () {
-                      setState(() {
-                        currentScreen =
-                            ProfileScreen(); // if user taps on this dashboard tab will be active
-                        currentTab = 1;
-                      });
-                    },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Icon(
-                          Icons.dashboard,
-                          color: currentTab == 1 ? Colors.black : Colors.white,
-                        ),
-                        Text(
-                          'Profile',
-                          style: TextStyle(
-                            color:
-                                currentTab == 1 ? Colors.black : Colors.white,
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    MaterialButton(
+                      splashColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      minWidth: 40,
+                      onPressed: () {
+                        setState(() {
+                          currentScreen =
+                              ProfileScreen(); // if user taps on this dashboard tab will be active
+                          currentTab = 1;
+                        });
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(
+                            Icons.track_changes,
+                            color: currentTab == 1
+                                ? const Color.fromRGBO(50, 75, 80, 1)
+                                : const Color.fromRGBO(152, 152, 156, 1),
                           ),
-                        ),
-                      ],
+                          Text(
+                            'Profile',
+                            style: TextStyle(
+                              color: currentTab == 1
+                                  ? const Color.fromRGBO(50, 75, 80, 1)
+                                  : const Color.fromRGBO(152, 152, 156, 1),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
