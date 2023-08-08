@@ -4,6 +4,7 @@ import "./profile_screen.dart";
 import "../widgets/app_drawer.dart";
 
 class TabsScreen extends StatefulWidget {
+  static const routeName = "/TabsScreen";
   @override
   State<TabsScreen> createState() => _TabsScreenState();
 }
@@ -113,7 +114,7 @@ class _TabsScreenState extends State<TabsScreen> {
                                 : const Color.fromRGBO(152, 152, 156, 1),
                           ),
                           Text(
-                            'Profile',
+                            'Track',
                             style: TextStyle(
                               color: currentTab == 1
                                   ? const Color.fromRGBO(50, 75, 80, 1)

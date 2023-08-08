@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 import "./screens/tabs_screen.dart";
+import "./screens/onboarding_screen.dart";
 
 void main() => runApp(MyApp());
 
@@ -38,8 +39,10 @@ class _MyAppState extends State<MyApp> {
           color: Color.fromRGBO(50, 75, 80, 1),
         ),
       ),
-      home: TabsScreen(),
-      routes: {},
+      home: OnboardingScreen(),
+      routes: {
+        TabsScreen.routeName: (_) => TabsScreen()
+      },
     );
   }
 }
