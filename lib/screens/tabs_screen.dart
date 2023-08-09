@@ -20,7 +20,7 @@ class _TabsScreenState extends State<TabsScreen> {
       endDrawer: AppDrawer(),
       appBar: AppBar(
         title: const Text(
-          "Food classification",
+          "FoodSnap",
           style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),
         ),
       ),

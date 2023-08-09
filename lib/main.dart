@@ -14,7 +14,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "food classification",
+      title: "FoodSnap",
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromRGBO(222, 230, 232, 1),
         splashColor: const Color.fromRGBO(50, 75, 80, 1),

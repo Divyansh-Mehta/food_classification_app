@@ -51,7 +51,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     double height = SizeConfig.screenH!;
 
     return Scaffold(
-      backgroundColor: colors[_currentPage],
+      backgroundColor: Color(0xffDCF6E6),
       body: SafeArea(
         child: Column(
           children: [
@@ -117,7 +117,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                       TabsScreen.routeName);
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.black,
+                                  backgroundColor:
+                                      const Color.fromRGBO(50, 75, 80, 1),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(50),
                                   ),
@@ -150,7 +151,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 ),
                                 child: const Text(
                                   "Already Have An Account? Log In",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(50, 75, 80, 1),
+                                  ),
                                 ),
                               ),
                             ],
@@ -174,7 +177,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 ),
                                 child: const Text(
                                   "SKIP",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(50, 75, 80, 1)),
                                 ),
                               ),
                               ElevatedButton(
@@ -185,7 +189,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   );
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.black,
+                                  backgroundColor:
+                                      const Color.fromRGBO(50, 75, 80, 1),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(50),
                                   ),
@@ -198,7 +203,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   textStyle: TextStyle(
                                       fontSize: (width <= 550) ? 13 : 17),
                                 ),
-                                child: const Text("NEXT"),
+                                child: const Text(
+                                  "NEXT",
+                                  style: TextStyle(
+                                    color: Color(0xffDCF6E6),
+                                  ),
+                                ),
                               ),
                             ],
                           ),
