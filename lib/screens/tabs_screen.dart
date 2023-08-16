@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "home_screen.dart";
-import "./profile_screen.dart";
+import "./track_screen.dart";
 import "../widgets/app_drawer.dart";
 
 class TabsScreen extends StatefulWidget {
@@ -100,7 +100,7 @@ class _TabsScreenState extends State<TabsScreen> {
                       onPressed: () {
                         setState(() {
                           currentScreen =
-                              ProfileScreen(); // if user taps on this dashboard tab will be active
+                              TrackScreen(); // if user taps on this dashboard tab will be active
                           currentTab = 1;
                         });
                       },
