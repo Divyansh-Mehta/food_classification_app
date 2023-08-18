@@ -20,7 +20,6 @@ class _MyAppState extends State<MyApp> {
         splashColor: const Color.fromRGBO(50, 75, 80, 1),
         bottomAppBarTheme: const BottomAppBarTheme(
           color: Colors.white,
-          shape: CircularNotchedRectangle(),
         ),
         appBarTheme: const AppBarTheme(
           color: Color.fromRGBO(222, 230, 232, 1),
