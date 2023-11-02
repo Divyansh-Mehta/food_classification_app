@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^5.0.0
   image_picker: ^1.0.1
   permission_handler: ^10.4.3
   http: ^1.1.0
@@ -37,6 +38,16 @@ dependencies:
   introduction_screen: ^3.1.8
   intl: ^0.18.1
   google_fonts: ^5.1.0
+  date_picker_timeline: ^1.2.5
+  percent_indicator: ^4.2.3
+
+  #google sign-in
+  firebase_auth: ^4.12.0
+  google_sign_in: ^6.1.5
+
+  #firestore
+  firebase_core: ^2.21.0
+  cloud_firestore: ^4.12.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -68,11 +79,40 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+      #Onboarding
     - assets/images/onboarding1.png
     - assets/images/onboarding2.png
     - assets/images/onboarding3.png
     - assets/images/foodsnap_logo.png
     - assets/images/splash_screen.png
+
+      #Icons
+    - assets/icons/carbs.png
+    - assets/icons/protien.png
+    - assets/icons/fat.png
+
+      #Food
+    - assets/food/dosa.png
+    - assets/food/biryani.png
+    - assets/food/Bisibelebath.png
+    - assets/food/butternaan.png
+    - assets/food/chaat.png
+    - assets/food/chappati.png
+    - assets/food/dhokla.png
+    - assets/food/gulabjamun.png
+    - assets/food/halwa.png
+    - assets/food/idly.png
+    - assets/food/kathiroll.png
+    - assets/food/medhuvada.png
+    - assets/food/noodles.png
+    - assets/food/paniyaram.png
+    - assets/food/poori.png
+    - assets/food/samosa.png
+    - assets/food/tandoorichicken.png
+    - assets/food/upma.png
+    - assets/food/vadapav.png
+    - assets/food/venpongal.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

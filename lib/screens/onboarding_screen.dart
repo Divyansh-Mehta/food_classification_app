@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:food_classification_app/providers/google_sign_in.dart';
 
 import './size_config.dart';
 import '../models/onboarding_contents.dart';
-import "./tabs_screen.dart";
+import "package:provider/provider.dart";
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -123,8 +124,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
-                                    Navigator.of(context).pushReplacementNamed(
-                                        TabsScreen.routeName);
+                                    final provider =
+                                        Provider.of<GoogleSignInProvider>(
+                                            context,
+                                            listen: false);
+                                    provider.googleLogIn();
+                                    // Navigator.of(context).pushReplacementNamed(
+                                    //     TabsScreen.routeName);
                                   },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor:
@@ -150,7 +156,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 ),
                                 TextButton(
                                   onPressed: () {
-                                    _controller.jumpToPage(2);
+                                    final provider =
+                                        Provider.of<GoogleSignInProvider>(
+                                            context,
+                                            listen: false);
+                                    provider.googleLogIn();
                                   },
                                   style: TextButton.styleFrom(
                                     elevation: 0,
