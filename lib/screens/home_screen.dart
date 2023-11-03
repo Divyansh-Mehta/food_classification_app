@@ -26,7 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
   DateTime _selectedDate = DateTime.now();
 
   NutritionDetail nd = NutritionDetail();
-  Nutrition? nt;
 
   @override
   Widget build(BuildContext context) {
@@ -116,7 +115,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemCount: treck.length,
                 itemBuilder: (context, index) {
                   String food = treck[index].name!;
-                  nt = nd.details[food];
+                  Nutrition? nt = nd.details[food];
+                  print(food);
                   return ListTile(
                     // visualDensity: VisualDensity(horizontal: 0, vertical: 0),
                     leading: CircleAvatar(
@@ -125,14 +125,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Image.asset(nt!.imgUrl as String),
                     ),
                     title: Text(treck[index].name!),
-                    subtitle: Text("🔥 ${nt!.calories} · 100G"),
+                    subtitle: Text("🔥 ${nt.calories} · 100G"),
                     trailing: IconButton(
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  NutritionScreen(food),
+                              builder: (context) => NutritionScreen(food),
                             ),
                           );
                         },
