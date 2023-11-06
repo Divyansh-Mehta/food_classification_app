@@ -9,7 +9,7 @@ class Nutrition {
 
 class NutritionDetail {
   Map<String, Nutrition> details = {
-    "biryani": Nutrition(139, 15.9, 48.07, 9.82, "assets/food/biryani.png"),
+    "biriyani": Nutrition(139, 15.9, 48.07, 9.82, "assets/food/biriyani.png"),
     "dosa": Nutrition(222, 2.7, 18.9, 5.2, "assets/food/dosa.png"),
     "bisibelebath":
         Nutrition(74.37, 10, 68, 12, "assets/food/bisibelebath.png"),

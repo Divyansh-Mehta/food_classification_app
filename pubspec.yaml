@@ -40,6 +40,7 @@ dependencies:
   google_fonts: ^5.1.0
   date_picker_timeline: ^1.2.5
   percent_indicator: ^4.2.3
+  modal_progress_hud_nsn: ^0.4.0
 
   #google sign-in
   firebase_auth: ^4.12.0
@@ -93,7 +94,7 @@ flutter:
 
       #Food
     - assets/food/dosa.png
-    - assets/food/biryani.png
+    - assets/food/biriyani.png
     - assets/food/Bisibelebath.png
     - assets/food/butternaan.png
     - assets/food/chaat.png
